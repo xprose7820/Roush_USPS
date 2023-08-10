@@ -1,0 +1,73 @@
+﻿@using Microsoft.AspNetCore.Html;
+@using RoushUSPS_App.ViewModels.Address;
+@{
+    AddressDetailViewModel originalAddress = ViewBag.AdoptAddressAsIs;
+    AddressDetailViewModel uspsAddress = ViewBag.AdoptUSPSVerifiedAddress;
+}
+
+@if (ViewBag.IsAddressValid)
+{
+    <p>Your address is a valid USPS Address!</p>
+    <p>Would you like to use...</p>
+
+    <div class="address-section">
+        <p class="address-title">USPS Verified Address:</p>
+        @DisplayAddress(uspsAddress)
+        <div class="action-section">
+            @Html.ActionLink("Use USPS Verified Address", "AdoptUSPSVerifiedAddress", "Address", new { id = uspsAddress.Id }, new { @class = "actionLinkCustom" })
+        </div>
+    </div>
+
+    <div class="address-section">
+        <p class="address-title">Original Address:</p>
+        @DisplayAddress(originalAddress)
+        <div class="action-section">
+            @Html.ActionLink("Use Original Address", "AdoptAddressAsIs", "Address", new { id = originalAddress.Id }, new { @class = "actionLinkCustom" })
+        </div>
+    </div>
+
+}
+else
+{
+    <p class="alert">Your address is not a valid USPS address.</p>
+    <div>
+        <p><a class="actionLinkCustom" asp-controller="Address" asp-action="GetAllUnprocessedAddresses" method="get">Go Back</a></p>
+    </div>
+}
+
+@functions {
+    private IHtmlContent DisplayAddress(AddressDetailViewModel address)
+    {
+        var builder = new HtmlContentBuilder();
+
+        if (!string.IsNullOrEmpty(address.Address2))
+        {
+            builder.AppendHtmlLine($"<div class='address-content'>{address.Address2}</div>");
+        }
+        if (!string.IsNullOrEmpty(address.Address1))
+        {
+            builder.AppendHtmlLine($"<div class='address-content'>{address.Address1}</div>");
+        }
+        if (!string.IsNullOrEmpty(address.City))
+        {
+            builder.AppendHtmlLine($"<div class='address-content'>{address.City}</div>");
+        }
+        if (!string.IsNullOrEmpty(address.State))
+        {
+            builder.AppendHtmlLine($"<div class='address-content'>{address.State}</div>");
+        }
+        if (!string.IsNullOrEmpty(address.ZipCode5))
+        {
+            builder.AppendHtml($"<div class='address-content'>{address.ZipCode5}");
+
+            if (!string.IsNullOrEmpty(address.ZipCode4))
+            {
+                builder.AppendHtml($"- {address.ZipCode4}");
+            }
+
+            builder.AppendHtml("</div>");
+        }
+
+        return builder;
+    }
+}

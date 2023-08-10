@@ -1,0 +1,16 @@
+﻿body{
+    background-image: url("../images/mail-7461731_1920.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#formContainer {
+    background: white;
+    border-radius: 1.5rem;
+    /*    border: 1px solid red;*/
+    margin-top: 8rem;
+    width: 60vh;
+    height: auto;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.4);
+}

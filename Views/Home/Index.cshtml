@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="landing-container text-center">
+    <h1 class="landing-title">Welcome! Choose an option:</h1>
+    <div class="landing-row">
+        <div class="landing-column">
+            <p><a asp-controller="Address" asp-action="Index" method="get" class="landing-link">View Processed Addresses</a></p>
+        </div>
+        <div class="landing-column">
+            <p><a asp-controller="Address" asp-action="Create" method="get" class="landing-link">Create New Address</a></p>
+        </div>
+        <div class="landing-column">
+            <p><a  asp-controller="Address" asp-action="GetAllUnprocessedAddresses" method="get" class="landing-link">View Unprocessed Addresses</a></p>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,155 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+#customForm_TableEdit {
+    border-radius: .5rem;
+    box-shadow: 0rem 0.3rem 1rem .25rem rgba(0,0,0,.3);
+}
+
+#manageUserRolesCard_customEdit {
+    background: linear-gradient(to right, #00ccff 10%, #99ebff 100%);
+    color: white;
+    border: none;
+    border-radius: .6rem;
+    box-shadow: 0 0 .5rem .05rem rgba(0, 0, 0, .2);
+}
+
+.pagination a:first-child, .pagination a:last-child {
+    color: white;
+    font-weight: lighter;
+    text-decoration: none;
+    background-color: rgba(255, 153, 255,.5);
+    border-radius: .3rem;
+    padding: .1rem .1rem;
+}
+
+    .pagination a:first-child:hover, .pagination a:last-child:hover {
+        background-color: rgba(255, 0, 255,.7); /* increase opacity for hover effect */
+        color: white; /* change text color on hover */
+        transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    }
+
+.pagination a:first-child {
+    margin-right: .4rem;
+}
+
+.pagination a:last-child {
+    margin-left: .4rem;
+}
+
+
+.toggleHoverCSS {
+    background: linear-gradient(to left, #FF95F8 10%, #FF4DF3 100%);
+    width: 94.5%;
+    border-radius: .5rem;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    box-shadow: 0 .2rem .5rem .1rem rgba(255, 158, 248, 1);
+}
+
+#customForm_TableEdit {
+    border-radius: .5rem;
+    box-shadow: 0rem 0.3rem 1rem .25rem rgba(0,0,0,.3);
+}
+
+.actionLinkCustom {
+    text-decoration: none;
+    background-color: rgba(253, 110, 254,.8);
+    color: white;
+    border-radius: .2rem;
+    padding: 0rem .3rem;
+    font-size: .9rem;
+}
+
+    .actionLinkCustom:hover {
+        background-color: rgba(255, 0, 255,.7); /* increase opacity for hover effect */
+        color: white; /* change text color on hover */
+        transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    }
+
+
+.address-section {
+    margin-bottom: 30px;
+    border: 1px solid #e4e4e4;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.address-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.address-content {
+    margin-bottom: 5px;
+}
+
+.action-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.landing-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.landing-title {
+    color: #444;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.landing-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.landing-column {
+    flex-basis: calc(33.3333% - 20px); /* Taking into account potential margin */
+    margin: 10px;
+    background-color: #1976D2;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    .landing-column:hover {
+        background-color: #1565C0;
+    }
+
+.landing-link {
+    display: block;
+    padding: 20px 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+    .landing-link:hover {
+        color: #e0e0e0;
+    }
